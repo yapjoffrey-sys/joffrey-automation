@@ -1,15 +1,20 @@
 <!DOCTYPE html>
-<html lang="en"><div class="card fade-in" style="animation-delay:0.2s">...</div>
-<div class="card fade-in" style="animation-delay:0.4s">...</div>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Joffrey Yap | Automation Systems Architect</title>
 
+<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<!-- n8n Chat CSS -->
 <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 
-<style>.fade-in {
+<!-- Styles -->
+<style>
+/* Fade-in animation */
+.fade-in {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 1s ease forwards;
@@ -18,204 +23,154 @@
 @keyframes fadeInUp {
   to { opacity: 1; transform: translateY(0); }
 }
-*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Arial,sans-serif}
-html{scroll-behavior:smooth}
-body{
-background:linear-gradient(135deg,#0f172a,#1e293b);
-color:#e2e8f0;
-}
+
+/* General Reset */
+* { margin:0; padding:0; box-sizing:border-box; font-family:Segoe UI, Arial, sans-serif; }
+html { scroll-behavior: smooth; }
+body { background: linear-gradient(135deg,#0f172a,#1e293b); color:#e2e8f0; }
 
 /* NAVBAR */
-nav{
-position:fixed;
-top:0;
-width:100%;
-background:rgba(15,23,42,0.8);
-backdrop-filter:blur(10px);
-padding:15px 50px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-z-index:1000;
+nav {
+  position: fixed; top:0; width:100%;
+  background: rgba(15,23,42,0.8); backdrop-filter: blur(10px);
+  padding:15px 50px; display:flex; justify-content:space-between; align-items:center; z-index:1000;
 }
-nav a{
-color:#38bdf8;
-text-decoration:none;
-margin-left:20px;
-font-weight:500;
+nav a {
+  color:#38bdf8; text-decoration:none; margin-left:20px; font-weight:500;
 }
-nav a:hover{color:#0ea5e9}
+nav a:hover { color:#0ea5e9; }
 
 /* HERO */
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
+.hero {
+  height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:20px;
 }
-.hero h1{font-size:52px;margin-bottom:15px}
-.hero p{color:#94a3b8;font-size:18px;margin-bottom:30px;max-width:600px}
-.button{
-padding:12px 25px;
-border-radius:10px;
-background:#38bdf8;
-color:#0f172a;
-text-decoration:none;
-font-weight:bold;
-transition:.3s;
+.hero h1 { font-size:52px; margin-bottom:15px; }
+.hero p { color:#94a3b8; font-size:18px; margin-bottom:30px; max-width:600px; }
+.button {
+  padding:12px 25px; border-radius:10px; background:#38bdf8; color:#0f172a; text-decoration:none; font-weight:bold; transition:.3s;
 }
-.button:hover{background:#0ea5e9;transform:translateY(-3px)}
+.button:hover { background:#0ea5e9; transform:translateY(-3px); }
 
 /* SECTION */
-section{padding:80px 20px;text-align:center}
-.section-title{
-font-size:32px;
-margin-bottom:40px;
-color:#38bdf8;
-}
+section { padding:80px 20px; text-align:center; }
+.section-title { font-size:32px; margin-bottom:40px; color:#38bdf8; }
 
 /* CARD */
-.card{
-background:rgba(30,41,59,0.6);
-backdrop-filter:blur(15px);
-border-radius:20px;
-padding:30px;
-margin:20px auto;
-width:90%;
-max-width:900px;
-box-shadow:0 15px 35px rgba(0,0,0,0.4);
-transition:.3s;
+.card {
+  background: rgba(30,41,59,0.6); backdrop-filter: blur(15px);
+  border-radius:20px; padding:30px; margin:20px auto; width:90%; max-width:900px;
+  box-shadow:0 15px 35px rgba(0,0,0,0.4); transition:.3s;
 }
-.card:hover{transform:translateY(-5px)}
+.card:hover { transform:translateY(-5px); }
 
 /* GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
-max-width:1100px;
-margin:auto;
-}
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; max-width:1100px; margin:auto; }
 
 /* PRICING */
-.price{
-font-size:32px;
-margin:15px 0;
-color:#22c55e;
-}
+.price { font-size:32px; margin:15px 0; color:#22c55e; }
 
 /* FOOTER */
-footer{
-padding:40px;
-text-align:center;
-color:#64748b;
-}
+footer { padding:40px; text-align:center; color:#64748b; }
 
 /* CHAT TOGGLE */
-#chatToggle{
-position:fixed;
-bottom:20px;
-right:20px;
-width:60px;
-height:60px;
-border-radius:50%;
-background:#38bdf8;
-border:none;
-font-size:22px;
-cursor:pointer;
-z-index:9999;
+#chatToggle {
+  position: fixed; bottom:20px; right:20px; width:60px; height:60px;
+  border-radius:50%; background:#38bdf8; border:none; font-size:22px; cursor:pointer; z-index:9999;
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <nav>
-<div><strong>JY Automation</strong></div>
-<div>
-<a href="#services">Services</a>
-<a href="#pricing">Pricing</a>
-<a href="#contact">Contact</a>
-</div>
+  <div><strong>JY Automation</strong></div>
+  <div>
+    <a href="#services">Services</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
 
+<!-- HERO -->
 <div class="hero">
-<h1>Automate. Scale. Eliminate Manual Work.</h1>
-<p>I design fully automated workflow systems using Docker & n8n that help businesses operate 10x faster with zero repetitive tasks.</p>
-<a href="#pricing" class="button">View Automation Packages</a>
+  <h1>Automate. Scale. Eliminate Manual Work.</h1>
+  <p>I design fully automated workflow systems using Docker & n8n that help businesses operate 10x faster with zero repetitive tasks.</p>
+  <a href="#pricing" class="button">View Automation Packages</a>
 </div>
 
+<!-- SERVICES -->
 <section id="services">
-<h2 class="section-title">Core Services</h2>
-<div class="grid">
-<div class="card">
-<h3>Workflow Automation</h3>
-<p>Custom n8n systems connecting Gmail, APIs, CRMs & cloud apps.</p>
-</div>
-<div class="card">
-<h3>Docker Production Setup</h3>
-<p>Secure containerized deployment for scalable infrastructure.</p>
-</div>
-<div class="card">
-<h3>IT System Optimization</h3>
-<p>Windows scripting, server setup & performance hardening.</p>
-</div>
-</div>
+  <h2 class="section-title">Core Services</h2>
+  <div class="grid">
+    <div class="card fade-in" style="animation-delay:0.2s">
+      <h3>Workflow Automation</h3>
+      <p>Custom n8n systems connecting Gmail, APIs, CRMs & cloud apps.</p>
+    </div>
+    <div class="card fade-in" style="animation-delay:0.4s">
+      <h3>Docker Production Setup</h3>
+      <p>Secure containerized deployment for scalable infrastructure.</p>
+    </div>
+    <div class="card fade-in" style="animation-delay:0.6s">
+      <h3>IT System Optimization</h3>
+      <p>Windows scripting, server setup & performance hardening.</p>
+    </div>
+  </div>
 </section>
 
+<!-- PRICING -->
 <section id="pricing">
-<h2 class="section-title">Automation Packages</h2>
-<div class="grid">
-<div class="card">
-<h3>Starter</h3>
-<p class="price">$150</p>
-<p>Single workflow automation</p>
-<p>Email/API integration</p>
-<p>Basic deployment</p>
-</div>
-<div class="card">
-<h3>Business</h3>
-<p class="price">$450</p>
-<p>Multi-workflow system</p>
-<p>Docker deployment</p>
-<p>Security hardening</p>
-</div>
-<div class="card">
-<h3>Enterprise</h3>
-<p class="price">Custom</p>
-<p>Full automation architecture</p>
-<p>Server provisioning</p>
-<p>Ongoing support</p>
-</div>
-</div>
+  <h2 class="section-title">Automation Packages</h2>
+  <div class="grid">
+    <div class="card fade-in" style="animation-delay:0.2s">
+      <h3>Starter</h3>
+      <p class="price">$150</p>
+      <p>Single workflow automation</p>
+      <p>Email/API integration</p>
+      <p>Basic deployment</p>
+    </div>
+    <div class="card fade-in" style="animation-delay:0.4s">
+      <h3>Business</h3>
+      <p class="price">$450</p>
+      <p>Multi-workflow system</p>
+      <p>Docker deployment</p>
+      <p>Security hardening</p>
+    </div>
+    <div class="card fade-in" style="animation-delay:0.6s">
+      <h3>Enterprise</h3>
+      <p class="price">Custom</p>
+      <p>Full automation architecture</p>
+      <p>Server provisioning</p>
+      <p>Ongoing support</p>
+    </div>
+  </div>
 </section>
 
+<!-- CLIENT FEEDBACK -->
 <section>
-<h2 class="section-title">Client Feedback</h2>
-<div class="card">
-<p>"Joffrey automated our internal workflow and saved us 20+ hours per week. Highly recommended."</p>
-</div>
+  <h2 class="section-title">Client Feedback</h2>
+  <div class="card fade-in" style="animation-delay:0.2s">
+    <p>"Joffrey automated our internal workflow and saved us 20+ hours per week. Highly recommended."</p>
+  </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
-<h2 class="section-title">Let's Build Your Automation</h2>
-<div class="card">
-<p>Email: yapjoffrey@gmail.com</p>
-<p>LinkedIn: linkedin.com/in/joffrey-yap-0a78a62b1</p>
-<p>Facebook: facebook.com/joffrey.yap</p>
-</div>
+  <h2 class="section-title">Let's Build Your Automation</h2>
+  <div class="card fade-in" style="animation-delay:0.2s">
+    <p>Email: yapjoffrey@gmail.com</p>
+    <p>LinkedIn: linkedin.com/in/joffrey-yap-0a78a62b1</p>
+    <p>Facebook: facebook.com/joffrey.yap</p>
+  </div>
 </section>
 
-<footer>
-© 2026 Joffrey Yap | Automation Systems Architect
-</footer>
+<!-- FOOTER -->
+<footer>© 2026 Joffrey Yap | Automation Systems Architect</footer>
 
-<!-- CHAT WIDGET BUTTON -->
+<!-- CHAT BUTTON -->
 <button id="chatToggle">💬</button>
 
+<!-- CHAT WIDGET -->
 <script type="module">
 import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
@@ -229,11 +184,7 @@ document.getElementById('chatToggle').addEventListener('click', () => {
     });
   } else {
     const chatDiv = document.querySelector('.n8n-chat-wrapper');
-    if (chatDiv.style.display === 'none') {
-      chatDiv.style.display = 'block';
-    } else {
-      chatDiv.style.display = 'none';
-    }
+    chatDiv.style.display = chatDiv.style.display === 'none' ? 'block' : 'none';
   }
 });
 </script>
