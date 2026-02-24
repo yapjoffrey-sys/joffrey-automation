@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joffrey Yap | Automation Systems Architect</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Arial,sans-serif}
+html{scroll-behavior:smooth}
+body{
+background:linear-gradient(135deg,#0f172a,#1e293b);
+color:#e2e8f0;
+}
+
+/* NAVBAR */
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(15,23,42,0.8);
+backdrop-filter:blur(10px);
+padding:15px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+}
+nav a{
+color:#38bdf8;
+text-decoration:none;
+margin-left:20px;
+font-weight:500;
+}
+nav a:hover{color:#0ea5e9}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+.hero h1{font-size:52px;margin-bottom:15px}
+.hero p{color:#94a3b8;font-size:18px;margin-bottom:30px;max-width:600px}
+.button{
+padding:12px 25px;
+border-radius:10px;
+background:#38bdf8;
+color:#0f172a;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+.button:hover{background:#0ea5e9;transform:translateY(-3px)}
+
+/* SECTION */
+section{padding:80px 20px;text-align:center}
+.section-title{
+font-size:32px;
+margin-bottom:40px;
+color:#38bdf8;
+}
+
+/* CARD */
+.card{
+background:rgba(30,41,59,0.6);
+backdrop-filter:blur(15px);
+border-radius:20px;
+padding:30px;
+margin:20px auto;
+width:90%;
+max-width:900px;
+box-shadow:0 15px 35px rgba(0,0,0,0.4);
+transition:.3s;
+}
+.card:hover{transform:translateY(-5px)}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+max-width:1100px;
+margin:auto;
+}
+
+/* PRICING */
+.price{
+font-size:32px;
+margin:15px 0;
+color:#22c55e;
+}
+
+/* FOOTER */
+footer{
+padding:40px;
+text-align:center;
+color:#64748b;
+}
+
+/* CHAT TOGGLE */
+#chatToggle{
+position:fixed;
+bottom:20px;
+right:20px;
+width:60px;
+height:60px;
+border-radius:50%;
+background:#38bdf8;
+border:none;
+font-size:22px;
+cursor:pointer;
+z-index:9999;
+}
+
+/* CHATBOX */
+#chatbox{
+position:fixed;
+bottom:100px;
+right:20px;
+width:330px;
+height:450px;
+background:#0f172a;
+border-radius:20px;
+padding:15px;
+display:none;
+flex-direction:column;
+border:1px solid #38bdf8;
+box-shadow:0 20px 40px rgba(0,0,0,0.5);
+}
+#messages{flex:1;overflow-y:auto;font-size:14px;margin-bottom:10px}
+.user-msg{text-align:right;margin-bottom:8px}
+.user-msg span{background:#38bdf8;color:#0f172a;padding:6px 10px;border-radius:10px}
+.bot-msg{text-align:left;margin-bottom:8px}
+.bot-msg span{background:#1e293b;border:1px solid #38bdf8;padding:6px 10px;border-radius:10px}
+.input-area{display:flex}
+#userMessage{
+flex:1;
+padding:8px;
+border-radius:8px;
+border:1px solid #38bdf8;
+background:#1e293b;
+color:white;
+}
+#sendBtn{
+padding:8px 12px;
+margin-left:5px;
+border-radius:8px;
+border:none;
+background:#38bdf8;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div><strong>JY Automation</strong></div>
+<div>
+<a href="#services">Services</a>
+<a href="#pricing">Pricing</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<div class="hero">
+<h1>Automate. Scale. Eliminate Manual Work.</h1>
+<p>I design fully automated workflow systems using Docker & n8n that help businesses operate 10x faster with zero repetitive tasks.</p>
+<a href="#pricing" class="button">View Automation Packages</a>
+</div>
+
+<section id="services">
+<h2 class="section-title">Core Services</h2>
+<div class="grid">
+<div class="card">
+<h3>Workflow Automation</h3>
+<p>Custom n8n systems connecting Gmail, APIs, CRMs & cloud apps.</p>
+</div>
+<div class="card">
+<h3>Docker Production Setup</h3>
+<p>Secure containerized deployment for scalable infrastructure.</p>
+</div>
+<div class="card">
+<h3>IT System Optimization</h3>
+<p>Windows scripting, server setup & performance hardening.</p>
+</div>
+</div>
+</section>
+
+<section id="pricing">
+<h2 class="section-title">Automation Packages</h2>
+<div class="grid">
+<div class="card">
+<h3>Starter</h3>
+<p class="price">$150</p>
+<p>Single workflow automation</p>
+<p>Email/API integration</p>
+<p>Basic deployment</p>
+</div>
+<div class="card">
+<h3>Business</h3>
+<p class="price">$450</p>
+<p>Multi-workflow system</p>
+<p>Docker deployment</p>
+<p>Security hardening</p>
+</div>
+<div class="card">
+<h3>Enterprise</h3>
+<p class="price">Custom</p>
+<p>Full automation architecture</p>
+<p>Server provisioning</p>
+<p>Ongoing support</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2 class="section-title">Client Feedback</h2>
+<div class="card">
+<p>"Joffrey automated our internal workflow and saved us 20+ hours per week. Highly recommended."</p>
+</div>
+</section>
+
+<section id="contact">
+<h2 class="section-title">Let's Build Your Automation</h2>
+<div class="card">
+<p>Email: yapjoffrey@gmail.com</p>
+<p>LinkedIn: linkedin.com/in/joffrey-yap-0a78a62b1</p>
+<p>Facebook: facebook.com/joffrey.yap</p>
+</div>
+</section>
+
+<footer>
+© 2026 Joffrey Yap | Automation Systems Architect
+</footer>
+
+<button id="chatToggle" onclick="toggleChat()">💬</button>
+
+<div id="chatbox">
+<div id="messages"></div>
+<div class="input-area">
+<input id="userMessage" type="text" placeholder="Ask about automation..." onkeypress="if(event.key==='Enter'){sendMessage()}">
+<button id="sendBtn" onclick="sendMessage()">Send</button>
+</div>
+</div>
+
+<script>
+function toggleChat(){
+const box=document.getElementById("chatbox");
+box.style.display=box.style.display==="flex"?"none":"flex";
+}
+
+function escapeHTML(str){
+return str.replace(/[&<>"']/g,function(m){
+return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[m];
+});
+}
+
+async function sendMessage(){
+const input=document.getElementById("userMessage");
+const message=input.value.trim();
+if(!message)return;
+
+const messagesDiv=document.getElementById("messages");
+
+messagesDiv.innerHTML+=`<div class="user-msg"><span>${escapeHTML(message)}</span></div>`;
+input.value="";
+messagesDiv.scrollTop=messagesDiv.scrollHeight;
+
+messagesDiv.innerHTML+=`<div class="bot-msg" id="typing"><span>Typing...</span></div>`;
+messagesDiv.scrollTop=messagesDiv.scrollHeight;
+
+try{
+const response=await fetch("https://portfoliobot.app.n8n.cloud/webhook/f1c3ce58-732d-4ee1-9735-63e538db683e",{
+method:"POST",
+headers:{"Content-Type":"application/json"},
+body:JSON.stringify({message})
+});
+const data=await response.json();
+document.getElementById("typing").remove();
+const botReply=data.reply||data?.[0]?.reply||"No response";
+messagesDiv.innerHTML+=`<div class="bot-msg"><span>${escapeHTML(botReply)}</span></div>`;
+messagesDiv.scrollTop=messagesDiv.scrollHeight;
+}catch(err){
+document.getElementById("typing").remove();
+messagesDiv.innerHTML+=`<div class="bot-msg"><span style="color:red;">Connection error</span></div>`;
+}
+}
+</script>
+
+</body>
+</html>
